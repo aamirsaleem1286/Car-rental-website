@@ -26,6 +26,6 @@ app.use(router)
 app.use('/form',form)
 console.log("npm run")
 app.use('*',function(req,res){
-  res.sendFile(path.join(__dirname,'../frontend/build/index.html'))
+  res.sendFile(path.join(__dirname, "../frontend/build" , "index.html"))
 })
 app.listen(4000)
