@@ -16,6 +16,11 @@ app.use(cors())
 mongoConnect()
 app.use(express.static(path.join(__dirname,'../frontend/build')))
 app.use(passport.initialize())
+var sess = {
+  secret: 'keyboard cat',
+  cookie: {}
+}
+app.use(session(sess))
 app.use(passport.session())
 app.use(router)
 app.use('/form',form)
